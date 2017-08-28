@@ -22,11 +22,15 @@ namespace practico1_semana1
             Console.WriteLine("Mi segundo metodo");
             CalcularParesIncluidos();
             Console.ReadKey();
-            */
-            //muestraPares();
-            //Console.ReadKey();
+            
+            muestraPares();
+            Console.ReadKey();
 
             mostrarIntIncluido();
+            Console.ReadKey();
+
+            */
+            mostrarMultiplo33();
             Console.ReadKey();
         }
 
@@ -137,7 +141,7 @@ namespace practico1_semana1
             if (minimo > maximo)
             {
                 min = maximo;
-                max = min;
+                max = minimo;
             }
             //condicional para ver si esta incluido dentro de los topes
             if (valor < min)
@@ -152,10 +156,40 @@ namespace practico1_semana1
                 Console.WriteLine("El valor que usted ingreso esta incluido dentro de los topes."); 
             }
        
-
-
-
         }
 
+        //Dados dos valores obtener el primer valor incluido entre ellos que sea multiplo de 33. Si no hay ninguno indicarlo.
+
+        static void mostrarMultiplo33() {
+            Console.WriteLine("Dados dos valores obtener el primer valor incluido entre ellos que sea multiplo de 33. Si no hay ninguno indicarlo.");
+
+            Console.WriteLine("Ingrese un minimo");
+            int minimo = 0;
+            int.TryParse(Console.ReadLine(), out minimo);
+            Console.WriteLine("Ingreso minimo " + minimo);
+
+            Console.WriteLine("Ingrese un maximo");
+            int maximo = 0;
+            int.TryParse(Console.ReadLine(), out maximo);
+            Console.WriteLine("Ingreso maximo " + maximo);
+
+            //condicional para ordenar dos valores
+            int min = minimo;
+            int max = maximo;
+             
+            if (minimo > maximo) {
+                min = maximo;
+                max = minimo;
+            }
+
+            //bucle para obtener valores incluidos multiplos de 33
+            for (int i = min; i <= max  ; i++) {
+                if (i % 33 == 0) {
+                    Console.WriteLine(i + " es multiplo de 33 "); 
+                }
+            }
+
+        }
+           
     }
 }
