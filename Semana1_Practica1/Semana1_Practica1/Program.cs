@@ -176,6 +176,7 @@ namespace practico1_semana1
             //condicional para ordenar dos valores
             int min = minimo;
             int max = maximo;
+            Boolean hayMultiplo = false;
              
             if (minimo > maximo) {
                 min = maximo;
@@ -185,10 +186,13 @@ namespace practico1_semana1
             //bucle para obtener valores incluidos multiplos de 33
             for (int i = min; i <= max  ; i++) {
                 if (i % 33 == 0) {
-                    Console.WriteLine(i + " es multiplo de 33 "); 
+                    Console.WriteLine(i + " es multiplo de 33 ");
+                    hayMultiplo = true;
                 }
             }
-
+            if (!hayMultiplo) {
+                Console.WriteLine("No hay multiplos de 33 incluido.");
+            }
         }
            
     }
