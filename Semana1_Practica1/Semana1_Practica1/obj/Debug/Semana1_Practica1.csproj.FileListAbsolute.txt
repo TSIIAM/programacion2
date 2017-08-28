@@ -7,3 +7,6 @@ G:\ORT\programacion 2\practicas\Semana1_Practica1\Semana1_Practica1\obj\Debug\Se
 G:\ORT\programacion 2\repositor\programacion2\Semana1_Practica1\Semana1_Practica1\bin\Debug\Semana1_Practica1.exe.config
 G:\ORT\programacion 2\repositor\programacion2\Semana1_Practica1\Semana1_Practica1\obj\Debug\Semana1_Practica1.exe
 G:\ORT\programacion 2\repositor\programacion2\Semana1_Practica1\Semana1_Practica1\obj\Debug\Semana1_Practica1.pdb
+G:\ORT\programacion 2\repositor\programacion2\Semana1_Practica1\Semana1_Practica1\bin\Debug\Semana1_Practica1.exe
+G:\ORT\programacion 2\repositor\programacion2\Semana1_Practica1\Semana1_Practica1\bin\Debug\Semana1_Practica1.pdb
+G:\ORT\programacion 2\repositor\programacion2\Semana1_Practica1\Semana1_Practica1\obj\Debug\Semana1_Practica1.csprojResolveAssemblyReference.cache

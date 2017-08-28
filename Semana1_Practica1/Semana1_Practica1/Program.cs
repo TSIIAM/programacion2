@@ -23,7 +23,10 @@ namespace practico1_semana1
             CalcularParesIncluidos();
             Console.ReadKey();
             */
-            muestraPares();
+            //muestraPares();
+            //Console.ReadKey();
+
+            mostrarIntIncluido();
             Console.ReadKey();
         }
 
@@ -102,6 +105,53 @@ namespace practico1_semana1
                     Console.WriteLine("El numero par es " + i);
                 } 
             }
+
+
+
+        }
+        /*Dados un valor y dos topes indicar si el valor esta comprendido entre los topes(inclusive)*/
+
+        static void mostrarIntIncluido() {
+            Console.WriteLine("Dados un valor y dos topes, indicar si el valor esta comprendido entre los topes");
+            //obtenemos los valores
+            Console.WriteLine("Ingrese un valor");
+            int valor = 0;
+            int.TryParse(Console.ReadLine(), out valor);
+            Console.WriteLine("Ingreso valor " + valor);
+
+            Console.WriteLine("Ingrese un minimo");
+            int minimo = 0;
+            int.TryParse(Console.ReadLine(), out minimo);
+            Console.WriteLine("Ingreso valor " + minimo);
+
+            Console.WriteLine("Ingrese un maximo");
+            int maximo = 0;
+            int.TryParse(Console.ReadLine(), out maximo);
+            Console.WriteLine("Ingreso valor " + maximo);
+
+
+            //realizamos condicional para ordenar los topes
+            int min = minimo;
+            int max = maximo;
+
+            if (minimo > maximo)
+            {
+                min = maximo;
+                max = min;
+            }
+            //condicional para ver si esta incluido dentro de los topes
+            if (valor < min)
+            {
+                Console.WriteLine("El valor que usted ingreso es menor y no esta incluido en los topes.");
+            }
+            else if (valor > max)
+            {
+                Console.WriteLine("El valor que usted ingreso es mayor y no esta incluido en los topes.");
+            }
+            else {
+                Console.WriteLine("El valor que usted ingreso esta incluido dentro de los topes."); 
+            }
+       
 
 
 
