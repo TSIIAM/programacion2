@@ -10,11 +10,36 @@ namespace Semana2_Practico1
     {
         static void Main(string[] args)
         {
-            Mascota perrito = new Mascota();
+            Mascota chico = new Mascota();
+            //Vendedor vendedor = new Vendedor();
+            pedirDatosMascota(chico);
+            chico.mostrarMascota();
+            Console.WriteLine(chico);
 
-            Vendedor alvaro = new Vendedor();
+
+
+            #region readkey
+            Console.ReadKey();
+            #endregion
 
         }
+        //endMain
+        static void pedirDatosMascota(Mascota mascota)
+        {
+            Console.WriteLine("Ingrese Nombre");
+            string nombre = Console.ReadLine();
+            Console.WriteLine("Ingrese Tipo de Mascota");
+            string tipo = Console.ReadLine();
+            Console.WriteLine("Ingrese Precio de Mascota");
+            decimal precio = 0;
+            decimal.TryParse(Console.ReadLine(), out precio);
+            mascota.modificarAtributos(tipo, precio, nombre);
+
+
+
+        }
+        //end pedirDatosMascota
+
 
     }
 }
