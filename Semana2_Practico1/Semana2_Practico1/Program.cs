@@ -10,6 +10,11 @@ namespace Semana2_Practico1
     {
         static void Main(string[] args)
         {
+            Mascota perrito = new Mascota();
+
+            Vendedor alvaro = new Vendedor();
+
         }
+
     }
 }
