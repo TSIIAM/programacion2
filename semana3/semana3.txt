@@ -1,0 +1,39 @@
+Una empresa de servicios desea informatizar su sistema de inspecciones a locales de
+comidas.
+
+
+De los locales en los cuales se realizan las inspecciones se conoce una dirección,
+razón social (única), teléfonos y cantidad de metros cuadrados.
+De los inspectores se conoce un código de funcionario (único), nombre y cédula
+
+
+
+
+
+
+Requerimientos:
+ Crear una aplicación de consola agregando en la misma las clases que se
+hayan identificado en la letra.
+ Crear un menú para las siguientes funcionalidades:
+o Alta de locales
+o Alta de inspectores
+o Modificar locales
+o Modificar inspectores
+o Listar todos los locales
+o Listar todos los inspectores
+ Si el usuario selecciona la opción que permite dar de alta locales, el sistema
+deberá solicitar los datos necesarios para poder crear una instancia de la
+clase Local verificando previamente que la razón social ya no esté asociada
+a otro local.
+ Si el usuario selecciona la opción que permite dar de alta inspectores, el
+sistema deberá solicitar los datos necesarios para crear una instancia de la
+clase Vendedor verificando previamente que no exista otro inspector con el
+mismo código.
+ Tener en cuenta que al momento en el que se crea la instancia se desea
+inicializar el valor de sus atributos.
+
+
+
+
+Clase  Local
+Clase  Inspector
