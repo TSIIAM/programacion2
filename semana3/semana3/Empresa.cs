@@ -9,8 +9,8 @@ namespace semana3
     class Empresa
     {
 
-        private List<Local> locales = new List<Local>;
-        private List<Inspector> inspectores = new List<Inspector>;
+        private List<Local> locales = new List<Local>();
+        private List<Inspector> inspectores = new List<Inspector>();
 
     }
 }
