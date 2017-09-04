@@ -36,4 +36,17 @@ inicializar el valor de sus atributos.
 
 
 Clase  Local
+
+direccion
+razon social  key
+telefonos
+cantidad metros
+
+
 Clase  Inspector
+codigo funcionario key
+nombre
+cedula
+
+
+Semana 3. Damos la estructura de datos LISTAS.
