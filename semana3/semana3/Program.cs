@@ -36,12 +36,15 @@ namespace semana3
             int opcion = 0;
             int.TryParse(Console.ReadLine(), out opcion);
             Console.WriteLine("Usted Selecciono la opcion " + opcion);
+            
             VerificarOpcion(opcion);
 
         }
         static void VerificarOpcion(int opcion) {
+            Console.Clear();
             switch (opcion) {
                 case 1:
+
                     AltaLocal();
                     break;
                 case 2:
