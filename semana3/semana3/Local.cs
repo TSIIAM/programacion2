@@ -11,11 +11,16 @@ namespace semana3
         #region Atributos
         private string direccion;
         private string razonSocial; /*Unico*/
-        private List<string> telefonos = new List<string>();
-        private int CantMetrosCuadrados;
+        private string telefono;
+        private decimal CantMetrosCuadrados;
         #endregion
         #region Constructor
-        public Local(string direccion, string razonSocial,int CantMetrosCuadrados) { }
+        public Local(string direccion, string telefono, string razonSocial, decimal CantMetrosCuadrados) {
+            this.direccion = direccion;
+            this.razonSocial = razonSocial;
+            this.telefono = telefono;
+            this.CantMetrosCuadrados = CantMetrosCuadrados;
+        }
         #endregion
     }
 }

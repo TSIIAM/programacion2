@@ -20,6 +20,8 @@ namespace semana3
             Console.ReadKey();
             #endregion
         }
+        //variable utilizada por el menu.
+        private static Empresa emp = new Empresa();
 
         static void MostrarMenu() {
             Console.WriteLine("1_ Alta Local");
@@ -68,12 +70,43 @@ namespace semana3
             }
 
         }
-        static void AltaLocal() { Console.Write("Alta Local... ");   }
-        static void AltaInspector() { Console.Write("Alta Inspector... "); }
-        static void ModificarLocal() { Console.Write("Modificar Local... "); }
-        static void ModificarInspector() { Console.Write("Modificar Inspector... "); }
-        static void ListarLocales() { Console.Write("Listar Locales... "); }
-        static void ListarInspectores() { Console.Write("Listar Inspectores... "); }
+        static void AltaLocal() {
+            Console.WriteLine(" Menu Alta Local " + "\n");
+            Console.WriteLine("Ingrese Direccion");
+            string direccion = Console.ReadLine();
+            Console.WriteLine("Ingrese Razon Social");
+            string razonSocial = Console.ReadLine();
+            Console.WriteLine("Ingrese  Telefono");
+            string telefono = Console.ReadLine();
+            Console.WriteLine("Ingrese  Metros Cuadrados");
+            decimal CantMetrosCuadrados = 0;
+            decimal.TryParse(Console.ReadLine(), out CantMetrosCuadrados);
+
+            if (DatosValidos(direccion, telefono, razonSocial, CantMetrosCuadrados)) {
+                emp.AltaLocal(direccion, telefono, razonSocial, CantMetrosCuadrados);
+            }
+
+
+
+
+        }
+        static void AltaInspector() { Console.WriteLine("Alta Inspector... "); }
+        static void ModificarLocal() { Console.WriteLine("Modificar Local... "); }
+        static void ModificarInspector() { Console.WriteLine("Modificar Inspector... "); }
+        static void ListarLocales() { Console.WriteLine("Listar Locales... "); }
+        static void ListarInspectores() { Console.WriteLine("Listar Inspectores... "); }
+
+        /*Metodo para verificar si los datos ingresados por el usuario son validos*/
+        static Boolean DatosValidos(string direccion, string telefono, string razonSocial, decimal CantMetrosCuadrados) {
+            Boolean valido = false;
+                if(direccion  != "" && telefono != ""  && razonSocial != "" && CantMetrosCuadrados  > 0) {
+                valido = true;  
+            }
+
+
+            return valido;
+        }
+        
         
 
     }
