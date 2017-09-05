@@ -13,7 +13,7 @@ namespace semana3
 
             Console.WriteLine("Iniciando Programa...");
             MostrarMenu();
-            ElegirOpcion();
+            
 
             #region Fin
             //Console.WriteLine("Cerrando programa...");
@@ -31,7 +31,8 @@ namespace semana3
             Console.WriteLine("5_ Listar Locales ");
             Console.WriteLine("6_ Listar Inspectores");
             Console.WriteLine("7_ Salir");
-             
+            ElegirOpcion();
+
         }
         static void ElegirOpcion() {
             Console.WriteLine("Seleccione una opción ");
@@ -82,32 +83,55 @@ namespace semana3
             decimal CantMetrosCuadrados = 0;
             decimal.TryParse(Console.ReadLine(), out CantMetrosCuadrados);
 
-            if (DatosValidos(direccion, telefono, razonSocial, CantMetrosCuadrados)) {
+            if (DatosValidosLocal(direccion, telefono, razonSocial, CantMetrosCuadrados)) {
                 emp.AltaLocal(direccion, telefono, razonSocial, CantMetrosCuadrados);
             }
-
-
-
-
+            MostrarMenu();
         }
-        static void AltaInspector() { Console.WriteLine("Alta Inspector... "); }
+        static void AltaInspector() { 
+            Console.WriteLine(" Menu Alta Inspector " + "\n");
+            Console.WriteLine("Ingrese Nombre");
+            string nombre = Console.ReadLine();
+            Console.WriteLine("Ingrese cedula");
+            string cedula = Console.ReadLine();
+            Console.WriteLine("Ingrese  Codigo de Funcionario");
+            int codigoFuncionario = 0;
+            int.TryParse(Console.ReadLine(), out codigoFuncionario);
+
+            if (DatosValidosInspector(nombre, cedula, codigoFuncionario) )
+            {
+                emp.AltaInspector(nombre, cedula, codigoFuncionario);
+            }
+            MostrarMenu();
+        }
         static void ModificarLocal() { Console.WriteLine("Modificar Local... "); }
         static void ModificarInspector() { Console.WriteLine("Modificar Inspector... "); }
         static void ListarLocales() { Console.WriteLine("Listar Locales... "); }
         static void ListarInspectores() { Console.WriteLine("Listar Inspectores... "); }
 
+
+        #region ValidarDatos
         /*Metodo para verificar si los datos ingresados por el usuario son validos*/
-        static Boolean DatosValidos(string direccion, string telefono, string razonSocial, decimal CantMetrosCuadrados) {
-            Boolean valido = false;
+        static bool DatosValidosLocal(string direccion, string telefono, string razonSocial, decimal CantMetrosCuadrados) {
+            bool valido = false;
                 if(direccion  != "" && telefono != ""  && razonSocial != "" && CantMetrosCuadrados  > 0) {
                 valido = true;  
             }
 
-
+       
             return valido;
         }
-        
-        
+        static bool DatosValidosInspector(string nombre, string cedula,  int codigoFuncionario)
+        {
+            bool valido = false;
+            if (nombre != "" && cedula != ""  && codigoFuncionario > 0)
+            {
+                valido = true;
+            }
+            return valido;
+        }
+        #endregion
+
 
     }
 }

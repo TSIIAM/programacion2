@@ -10,13 +10,36 @@ namespace semana3
     {
         #region Atributos
         private string nombre;
-        private decimal cedula;
+        private string cedula;
         private int codigoFuncionario; /*UNICO*/
 
         #endregion
         #region Constructor
-        public Inspector(string nombre, string cedula, int codigoFuncionario) { }
+        public Inspector(string nombre, string cedula, int codigoFuncionario) {
+            this.nombre = nombre;
+            this.cedula = cedula;
+            this.codigoFuncionario = codigoFuncionario;
+ 
+        }
+        #endregion
+        #region getset CodigoFuncionario
+        public int CodigoFuncionario
+        {
+            get
+            {
+                return codigoFuncionario;
+            }
+            set
+            {
+                codigoFuncionario = value;
+            }
+        }
+
         #endregion
 
     }
+
+
+
+
 }

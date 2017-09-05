@@ -9,7 +9,7 @@ namespace semana3
     class Local
     {
         #region Atributos
-        private string direccion;
+        private string direccion ;
         private string razonSocial; /*Unico*/
         private List<string> telefonos = new List<string>();
         private decimal CantMetrosCuadrados;
@@ -21,6 +21,17 @@ namespace semana3
             this.telefonos.Add(telefono);
             this.CantMetrosCuadrados = CantMetrosCuadrados;
         }
+        #endregion
+        #region getset RazonSocial
+        public string RazonSocial {
+            get {
+                return razonSocial;
+            }
+            set {
+                razonSocial = value;
+            }
+        }
+
         #endregion
     }
 }
