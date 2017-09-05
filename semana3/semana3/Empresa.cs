@@ -28,7 +28,8 @@ namespace semana3
                             "Telefono: " + telefono + "\n" +
                             "Razon Social: " + razonSocial + "\n" +
                             "Cantidad de Metros Cuadrados: " + CantMetrosCuadrados + "m3");
-            Local e = new Local(direccion, telefono, razonSocial,CantMetrosCuadrados);
+            Local loc = new Local(direccion, telefono, razonSocial,CantMetrosCuadrados);
+            locales.Add(loc);
             Console.WriteLine("Datos Ingresados con Exito!.");
 
         }
