@@ -21,6 +21,14 @@ namespace semana4
             this.telefono = telefono;
         }
         #endregion
-
+        public void ModificarDatos(string direccion, string nombre)
+        {
+            this.direccion = direccion;
+            this.nombre = nombre;
+        }
+        public override string ToString()
+        {
+            return this.nombre + "-" + this.direccion + "-" + this.telefono;
+        }
     }
 }

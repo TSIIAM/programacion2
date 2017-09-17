@@ -26,5 +26,33 @@ namespace semana4
             this.numero = Paquete.ultimoNumero++;
         }
         #endregion
+
+        public void ModificarPaquete(int peso, decimal precioBase, string direccion)
+        {
+            this.direccion = direccion;
+            this.peso = peso;
+            this.precioBase = precioBase;
+        }
+        public decimal CalcularCosto()
+        {
+            decimal costo = 0;
+            if (peso < 1)
+            {
+                costo = this.precioBase;
+            }
+            else if (peso > 1 && peso <= 3)
+            {
+                costo = this.precioBase * new Decimal(1.10);
+            }
+            else if (peso > 3)
+            {
+                costo = this.precioBase * new Decimal(1.20);
+            }
+            return costo;
+        }
+        public override string ToString()
+        {
+            return this.numero + "-" + this.peso + "-" + this.precioBase + "-" + this.direccion;
+        }
     }
 }

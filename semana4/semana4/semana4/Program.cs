@@ -80,19 +80,111 @@ namespace semana4
             MostrarMenu();
         }
         //Metodo que solicita los datos del paquete
-        static void  AltaPaquete(){}
+        static void  AltaPaquete(){
+
+            Console.WriteLine("Ingrese direccion de destino");
+            string direccionDestino = Console.ReadLine();
+            Console.WriteLine("Ingrese peso");
+            int peso = 0;
+            int.TryParse(Console.ReadLine(), out peso);
+            Console.WriteLine("Ingrese precio base");
+            decimal precioBase = 0;
+            decimal.TryParse(Console.ReadLine(), out precioBase);
+            Console.WriteLine("Seleccione un remitente");
+            ListarRemitentes();
+            Console.WriteLine("Ingrese el telefono del remitente seleccionado");
+            string telefono = Console.ReadLine();
+
+            if (emp.BuscarRemitente(telefono) == null)//verifica que exista el remitente
+            {
+                Console.WriteLine("El remitente no existe, seleccione la opción para dar de alta el mismo");
+            }
+            else if (telefono != "" && direccionDestino != "" && peso > 0 && precioBase > 0)
+
+            {
+                if (emp.AltaPaquete(direccionDestino, peso, precioBase, telefono))
+                {
+                    Console.WriteLine("El alta del paquete se realizó correctamente");
+                }
+                else
+                {
+                    Console.WriteLine("El alta del paquete no se realizó");
+                }
+            }
+
+        }
+        static void ListarRemitentes()
+        {
+            Console.WriteLine(emp.ListarRemitentes());
+        }
+
+
         //Metodo que permite modificar un Remitente de una Lista
-        static void   ModificarRemitente(){}
+        static void   ModificarRemitente(){
+            Console.WriteLine("Ingrese direccion");
+            string direccion = Console.ReadLine();
+            Console.WriteLine("Ingrese nombre");
+            string nombre = Console.ReadLine();
+            Console.WriteLine("Seleccione el remitente que desea modificar");
+            ListarRemitentes();
+            Console.WriteLine("Ingrese telefono del remitente que desea modificar");
+            string telefono = Console.ReadLine();
+            if (telefono != "" && direccion != "" && nombre != "")
+
+            {
+                Console.WriteLine(emp.ModificarRemitente(direccion, nombre, telefono));
+
+            }
+
+
+        }
         //Metodo que permite modificar un Paquete de una Lista
-        static void   ModificarPaquete(){}
+        static void   ModificarPaquete(){
+            Console.WriteLine("Ingrese direccion de destino");
+            string direccionDestino = Console.ReadLine();
+            Console.WriteLine("Ingrese peso");
+            int peso = 0;
+            int.TryParse(Console.ReadLine(), out peso);
+            Console.WriteLine("Ingrese precio base");
+            decimal precioBase = 0;
+            decimal.TryParse(Console.ReadLine(), out precioBase);
+            Console.WriteLine("Seleccione el paquete a modificar");
+            ListarPaquetes();
+            Console.WriteLine("Ingrese el codigo del paquete seleccionado");
+            int codigo = 0;
+            if (int.TryParse(Console.ReadLine(), out codigo))
+            {
+                if (direccionDestino != "" && peso > 0 && precioBase > 0)
+                {
+                    Console.WriteLine(emp.ModificarPaquete(peso, precioBase, direccionDestino, codigo));
+
+                }
+            }
+
+        }
+        //muestra los datos de los paquetes existentes en el sistema
+        static void ListarPaquetes()
+        {
+            Console.WriteLine(emp.ListarPaquetes());
+        }
+
         /*Calcular el costo de un paquete sabiendo que el mismo depende de su peso:
  si el paquete pesa menos de un kilo, su costo es el precio base,
  si el paquete pesa entre 1 kilo y 3 kilos, el precio es el precio base más
 un 10 %
  Si el paquete pesa más de 3 kilos el precio es el precio base más un
-20%*/
+20%
+*/
         static void CalcularCostoPaquete(){
-        
+            Console.WriteLine("Seleccione el paquete a modificar");
+            ListarPaquetes();
+            Console.WriteLine("Ingrese el codigo del paquete seleccionado");
+            int codigo = 0;
+            if (int.TryParse(Console.ReadLine(), out codigo))
+            {
+                Console.WriteLine(emp.CalcularCosto(codigo));
+            }
+
         }
 
         //verificar datos
