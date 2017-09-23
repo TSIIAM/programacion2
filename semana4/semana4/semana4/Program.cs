@@ -8,6 +8,7 @@ namespace semana4
 {
     class Program
     {
+        public static Empresa emp = new Empresa();
         static void Main(string[] args)
         {
             MostrarMenu();
@@ -16,7 +17,7 @@ namespace semana4
 
  
         }
-        public static Empresa emp = new Empresa();
+        
         /*imprime en pantalla las opciones del menú*/
         static void MostrarMenu()
         {
@@ -45,9 +46,10 @@ namespace semana4
                 case 2: AltaPaquete();
                     break;
                 case 3:
-                    ModificarRemitente();
+                    ModificarPaquete();
                     break;
-                case 4: ModificarPaquete();
+                case 4:
+                    ModificarRemitente(); 
                     break;
                 case 5:
                     CalcularCostoPaquete();

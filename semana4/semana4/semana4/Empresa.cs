@@ -71,7 +71,7 @@ namespace semana4
             if (remitente != null)
             {
                 //(Remitente remitente, int peso, string direccion, decimal precioBase)
-                this.paquetes.Add(new Paquete(remitente ,peso, direccion, precioBase));
+                this.paquetes.Add(new Paquete(remitente ,peso, direccion));
             }
             if (paquetes.Count > cantElementos)
             {
@@ -96,7 +96,7 @@ namespace semana4
             if (p != null)
             {
 
-                p.ModificarPaquete(peso, precioBase, direccionDestino);
+                p.ModificarPaquete(peso, direccionDestino);
 
             }
             return p.ToString();
@@ -150,6 +150,24 @@ namespace semana4
 
             }
             return r.ToString();
+        }
+        public bool AltaSobre(string direccionDestino, int peso, string telefono,
+           string tamanio)
+        {
+
+            bool alta = false;
+            int cantActual = this.paquetes.Count;
+            Remitente r = this.BuscarRemitente(telefono);
+            if (r != null)
+            {
+                this.paquetes.Add(new Sobre(direccionDestino, r, peso, tamanio));
+            }
+            if (cantActual < this.paquetes.Count)
+            {
+                alta = true;
+            }
+            return alta;
+
         }
     }
 }
