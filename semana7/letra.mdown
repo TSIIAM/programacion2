@@ -1,0 +1,20 @@
+## Practico semana 7
+Una empresa de desarrollo de software nos solicita una aplicación para registrar las
+diversas tareas que se realizan en sus proyectos.
+
+ Se registrarán los proyectos (fecha
+de comienzo, nombre, cliente y gerente de proyecto), además de las tareas que lo
+componen.
+
+
+De estas tareas se conoce una descripción, una fecha de comienzo, un estado (nueva,
+enProceso,terminada o cancelada) y su usuario responsable (string).
+
+ Se identificaron 2
+tipos de tareas, simples y compuestas. Las tareas simples tiene una duración
+estimada y las compuestas son tareas conformadas a su vez por tareas simples y su
+duración será la suma de las tareas simples que la componen.
+
+7
+De cada cliente que solicita la realización del proyecto se conoce el razón social,
+teléfono de contacto, dirección y persona de contacto
