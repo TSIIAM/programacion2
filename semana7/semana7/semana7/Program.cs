@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Empresa;
+
 
 namespace semana7
 {
@@ -10,6 +12,8 @@ namespace semana7
     {
         static void Main(string[] args)
         {
+            
+            Console.ReadKey();
         }
     }
 }

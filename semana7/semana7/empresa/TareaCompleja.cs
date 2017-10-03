@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Empresa
 {
-    public class Empresa
+     public class TareaCompleja : Tarea
     {
-        private List<Cliente> clientes = new List<Cliente>();
-        private List<Proyecto> proyectos = new List<Proyecto>();
+        private List<TareaSimple> simples = new List<TareaSimple>();
 
 
     }
