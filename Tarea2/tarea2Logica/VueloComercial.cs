@@ -22,6 +22,20 @@ namespace tarea2Logica
                 
             }
         }
-      
+
+        public override string ToString()
+        {
+            string aeropuertos = "";
+            for (int i = 0; i < listaAeropuertos.Count; i++)
+            {
+
+                aeropuertos += listaAeropuertos[i] + " ";
+                
+
+            }
+
+            return base.ToString() + " pasara por Aeropuerto  " + aeropuertos;
+        }
+
     }
 }

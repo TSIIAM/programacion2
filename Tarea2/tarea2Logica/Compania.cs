@@ -8,21 +8,25 @@ namespace tarea2Logica
 {
     public class Compania
     {
-        private int razonSocial;
+        private string razonSocial;
         private string telefono;
         private string direccion;
 
-        public int RazonSocial
+        public string RazonSocial
         {
             get { return razonSocial; }
 
         }
-        public Compania(int razonSocial, string telefono, string direccion)
+        public Compania(string razonSocial, string telefono, string direccion)
         {
             this.razonSocial = razonSocial;
             this.telefono = telefono;
             this.direccion = direccion;
              
+        }
+        public override string ToString()
+        {
+            return " La compania " + this.razonSocial + " telefono " + this.telefono;
         }
     }
 }

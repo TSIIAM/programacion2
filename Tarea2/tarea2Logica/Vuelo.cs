@@ -15,6 +15,22 @@ namespace tarea2Logica
         private Compania deCompania;
         private DateTime fechaHoraSalida;
 
+        public int IdVuelo
+        {
+            get { return idVuelo; }
+
+        }
+        public string Destino
+        {
+            get { return destino; }
+
+        }
+        public DateTime FechaHoraSalida
+        {
+            get { return fechaHoraSalida; }
+
+        }
+
 
         public Vuelo(string destino, Compania deCompania, DateTime fechaHoraSalida)
         {
@@ -23,6 +39,12 @@ namespace tarea2Logica
             this.fechaHoraSalida = fechaHoraSalida;
             this.idVuelo = Vuelo.ultimoId++;
 
+        }
+        public override string ToString()
+        {
+            return "El vuelo numero [" + this.idVuelo + "] destino " + this.destino + " de la compania es " + this.deCompania.RazonSocial + "\n" + " saldra el Dia " + this.fechaHoraSalida.Day +
+                " hora " + this.fechaHoraSalida.Hour + " minuto  " + this.fechaHoraSalida.Minute;
+             
         }
 
     }
