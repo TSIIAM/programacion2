@@ -4,13 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Empresa
+namespace PracticoSemana7_Dominio
 {
     public class Empresa
     {
-        private List<Cliente> clientes = new List<Cliente>();
         private List<Proyecto> proyectos = new List<Proyecto>();
-
-
+        private List<Cliente> clientes = new List<Cliente>();
     }
 }

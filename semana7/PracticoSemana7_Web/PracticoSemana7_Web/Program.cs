@@ -3,17 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Empresa;
+using PracticoSemana7_Dominio;
 
-
-namespace semana7
+namespace PracticoSemana7_Web
 {
     class Program
     {
         static void Main(string[] args)
         {
-            
-            Console.ReadKey();
         }
     }
 }

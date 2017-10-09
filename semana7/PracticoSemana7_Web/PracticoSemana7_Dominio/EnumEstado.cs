@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Empresa
+namespace PracticoSemana7_Dominio
 {
-    public class TareaSimple : Tarea
+    public enum EnumEstado
     {
-        private int duracionEstimado;
-
-
+        nueva,
+        cancelada,
+        enProceso,
+        terminada
     }
 }
