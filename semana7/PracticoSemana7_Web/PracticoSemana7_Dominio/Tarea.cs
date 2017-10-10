@@ -12,7 +12,10 @@ namespace PracticoSemana7_Dominio
         private DateTime fechaComienzo;
         private EnumEstado estado;
         private string usuario;
-
+        public string Descripcion
+        {
+            get { return descripcion; }
+        }
         public Tarea(string descripcion, DateTime fechaComienzo, EnumEstado estado, string usuario)
         {
             this.descripcion = descripcion;

@@ -12,6 +12,10 @@ namespace PracticoSemana7_Dominio
         private string telefono;
         private string direccion;
         private string nombreContacto;
+        public string RazonSocial
+        {
+            get { return razonSocial; }
+        }
 
         public Cliente(string razonSocial, string telefono, string direccion, string nombreContacto)
         {
@@ -19,6 +23,12 @@ namespace PracticoSemana7_Dominio
             this.telefono = telefono;
             this.direccion = direccion;
             this.nombreContacto = nombreContacto;
+        }
+
+        public override string ToString()
+        {
+            return "Cliente: " + this.razonSocial + "  Telefono:  " + this.telefono + " Nombre de Contacto: " + this.nombreContacto;
+
         }
     }
 }
