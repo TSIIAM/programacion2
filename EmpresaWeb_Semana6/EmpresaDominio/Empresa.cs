@@ -13,9 +13,24 @@ namespace EmpresaDominio
         private long rut;
         private string razonSocial;
         private List<Categoria> categorias = new List<Categoria>();
+        private static Empresa instancia;
 
-        public Empresa(long rut, string razonSocial)
+
+        public static Empresa Instancia {
+          get {
+                if (instancia == null) {
+                    instancia = new Empresa(123465, "Ort");
+                }
+                return instancia;
+           }        
+        }
+
+
+
+
+        private Empresa(long rut, string razonSocial)
         {
+ 
             this.rut = rut;
             this.razonSocial = razonSocial;
             this.CargarDatosPrueba();
