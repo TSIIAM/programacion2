@@ -1,0 +1,74 @@
+Arquitectura cliente servidor.
+
+Internet Information Server
+
+cliente request Servidor
+Servidor response cliente
+
+Hiper text transfer protocol(http)
+
+
+Aplicacion Web ASP.net
+
+Formulario Web
+
+aspx  visual del formulario
+aspx.cs  logica del formulario(code behind)
+
+
+Access method Partial
+
+
+Label  descripcion
+Textbox  Input
+
+Button
+
+
+Label    Lbl Descripcion
+TextBox   txtDescripcion
+Button  BtnGuardar
+
+
+Patron de Diseño Singleton
+
+3 requisitos
+1- Constructor privado
+2-abributo de clase tipo de dato es la propia clase
+3-Propiedad publica del atributo anterior
+
+
+Empresa.cs
+1
+private Empresa(string razonSocial, long rut){
+	this.razonSocial = razonSocial;
+	this.rut = rut;
+
+}
+
+2
+private static Empresa instancia;
+
+3
+public static Empresa Instancia{
+	get{
+		if(Instancia == null){
+			Instancia = new Empresa();
+		}
+		return Instancia;
+	}
+	 
+
+}
+
+30/10
+
+
+06/11
+
+1) Dominio Clase usuario password nombre Uusuario
+2) formulario Web - inicio.aspx
+
+3) Agregar Usuarios.
+4) Alta Usuario
+5) Buscar Usuario
