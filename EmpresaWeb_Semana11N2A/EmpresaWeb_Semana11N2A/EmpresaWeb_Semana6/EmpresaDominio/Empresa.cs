@@ -29,7 +29,8 @@ namespace EmpresaDominio
                 if (instancia == null)
                 {
                     instancia = new Empresa(12345664789102, "GruposN2AM2C");
-                    
+                  
+
                 }
                 return instancia;
             }
@@ -41,6 +42,56 @@ namespace EmpresaDominio
             {
                 return this.cargos;
             }
+        }
+        public List<Usuario> usuarios = new List<Usuario>();
+
+
+
+        public void CargarDatosDefecto() {
+            
+        }
+        /// <summary>
+        /// Da de alta un nuevo Usuario por password y nombre de Usuario
+        /// </summary>
+        /// <param name="password"></param>
+        /// <param name="nombreUsuario"></param>
+        /// <returns></returns>
+        public bool AltaUsuario(string password, string nombreUsuario) {
+            bool dioAlta;
+            Usuario existeUsuario = BuscarUsuario(password , nombreUsuario);
+            if (existeUsuario == null)
+            {
+                Usuario nuevoUsuario = new Usuario( password, nombreUsuario);
+                usuarios.Add(nuevoUsuario);
+                dioAlta = true;
+                return dioAlta;
+            }
+            dioAlta = false;
+            return dioAlta;
+
+        }
+        /// <summary>
+        /// Busca si existe usuario por nomre que tenga esa contraseña.
+        /// </summary>
+        /// <param name="password"></param>
+        /// <param name="nombreUsuario"></param>
+        /// <returns></returns>
+        public Usuario BuscarUsuario(string password , string nombreUsuario)
+        {
+
+            Usuario existeUsuario = null;
+
+            foreach (Usuario usuario in usuarios)
+            {
+                if (usuario.NombreUsuario == nombreUsuario  && usuario.Password == password)
+                {
+                    return existeUsuario = usuario;
+
+
+                }
+            }
+            return existeUsuario;
+
         }
 
         #region Funcionarios
@@ -228,7 +279,10 @@ namespace EmpresaDominio
             this.AltaCargo("Desarrollador", 25000,"Sistemas");
             this.AltaCargo("Programador", 25000,"Administracion");
             this.AltaCargo("Ingeniero", 40000,"Sistemas");
-            
+            this.AltaUsuario("123456", "Pablo");
+            this.AltaUsuario("123456", "Jesus");
+            this.AltaUsuario("123456", "Jose");
+            this.AltaUsuario("123456", "Judas");
         }
     }
 }

@@ -5,9 +5,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
     <asp:Label ID="LblNombre" runat="server" Text="Nombre" Width="150px"></asp:Label>
         <asp:TextBox ID="TxtNombre" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator">Campo requerido</asp:RequiredFieldValidator>
         <br />
          <asp:Label ID="LblSueldo" runat="server" Text="Sueldo" Width="150px"></asp:Label>
         <asp:TextBox ID="TxtSueldo" runat="server"></asp:TextBox>
+        <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="RangeValidator" MaximumValue="25000" MinimumValue="10000"></asp:RangeValidator>
         <br />
           <asp:Label ID="LblFecNacimiento" runat="server" Text="Fecha de nacimiento" Width="150px"></asp:Label>
         <asp:TextBox ID="TxtFecNacimiento" runat="server" TextMode="Date"></asp:TextBox>
@@ -38,6 +40,9 @@
         <br />
      </asp:Panel>
         <asp:Button ID="BtnGuardar" runat="server" Text="Guardar" OnClick="BtnGuardar_Click" />
+        <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
+    <br />
+    <br />
         <br />
         <br />
         <asp:Label ID="LblMensaje" runat="server"></asp:Label>
